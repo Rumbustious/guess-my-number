@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+body {
+    background-color: #222;
+    color: #eee;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-bottom: min(5rem, 15vh);
+}
+button {
+    background-color: #eee;
+    color: #222;
+    border: 0;
+    padding: 2rem 3rem;
+    font-size: 1.2rem;
+}
+button:hover {
+   background-color: #ccc;
+}
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+.reset-part {
+    margin-block: 2rem;
+    margin-inline: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.game-title {
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-block: 2rem;
+}
+.secret-number {
+    margin: 0;
+    padding: 1.5rem 1.5rem 0 2rem;
+    aspect-ratio: 1;
+    font-size: 3rem;
+    color: #222;
+    background-color: #eee;
+    text-align: center;
+}
+.secret-number::after {
+    content: '';
+    display: block;
+    background-color: #eee;
+    width: 100vw;
+    height: 10px;
+    position: absolute;
+    bottom: 45%;
+    left: 0;
+    z-index: -1;
+}
+.guess-field {
+    flex-direction: column;
+}
+#guess-input {
+    background-color: #222;
+    color: #eee;
+    font-size: 2rem;
+    padding: 2rem;
+    width: 15rem;
+    border: #eee 5px solid;
+    margin-bottom: clamp(0.5rem, 4vw, 3rem);
+}
+.game-part {
+    margin-inline: clamp(2rem, 15vw, 40rem);
+    justify-content: space-between;
+    align-items: center;
+}
+.stats-field {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+.message {
+    margin-bottom: 6rem;
+}
+@media (max-width: 50em) {
+    .game-part {
+        flex-direction: column;
+    }
+    .stats-field {
+        order: -1;
+    }
+    .reset-part {
+        flex-direction: column;
+    }
+    .message {
+        margin-bottom: 0;
+    }
+}
