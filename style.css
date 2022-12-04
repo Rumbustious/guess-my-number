@@ -89,7 +89,9 @@ button:hover {
     }
     .stats-field {
         order: -1;
+        text-align: center;
     }
+   
     .reset-part {
         flex-direction: column;
     }
